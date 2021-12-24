@@ -15,10 +15,12 @@
   <header>
     <a href="#" class="logo">Arctic Notes</a>
   </header>
-  <div class="toolbars">
-    <button type="button" class="btn-save">Save</button>
+  <form class="toolbars">
+    <label for="open-file" class="btn open">Open</label>
+    <input type="file" accept="text/plain" class="file-input" id="open-file" />
+    <button type="submit" class="btn save">Save</button>
     <input type="text" id="title" class="title-input" placeholder="Enter your title">
-  </div>
+  </form>
   <textarea id="text" class="text" rows="22" placeholder="Enter your text"></textarea>
   <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

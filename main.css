@@ -33,15 +33,27 @@ header .logo {
 
 .toolbars {
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 20% 60%;
   border-bottom: 1px solid #f5f5f8;
   width: 100%;
 }
 
-.toolbars .btn-save {
-  padding: 1em 0;
-  background-color: #0d6efd;
+.toolbars .file-input {
+  display: none;
+}
+
+.toolbars .btn {
+  padding: .8em 0;
   color: white;
+}
+
+.toolbars .btn.open {
+  background-color: gray;
+  text-align: center;
+}
+
+.toolbars .btn.save {
+  background-color: #0d6efd;
 }
 
 .toolbars .title-input {
