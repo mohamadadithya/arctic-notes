@@ -5,21 +5,12 @@ const form = document.querySelector('.toolbars')
 const fileInput = document.querySelector('.file-input')
 const titleInput = document.querySelector('.title-input')
 
-let notyf = new Notyf({
-  ripple: true
-});
+let notyf = new Notyf({ ripple: true })
 
-const slugify = str =>
-str
-.toLowerCase()
-.trim()
-.replace(/[^\w\s-]/g, '')
-.replace(/[\s_-]+/g, '-')
-.replace(/^-+|-+$/g, '')
+const slugify = str => str.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '')
 
 const extractFileToText = (event) => {
   let input = event.target
-
   const reader = new FileReader()
   reader.onload = () => {
     let text = reader.result
@@ -28,7 +19,6 @@ const extractFileToText = (event) => {
   let fileName = input.files[0].name
   let title = fileName.replace(/\.[^/.]+$/, "")
   titleInput.value = title
-
   reader.readAsText(input.files[0])
 }
 
